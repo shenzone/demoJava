@@ -36,8 +36,8 @@ publishing {
       }
     }
   }
-      publications {
-        github(MavenPublication) {
+  publications {
+	github(MavenPublication) {
             versionMapping {
                 usage('java-api') {
                     fromResolutionOf('runtimeClasspath')
@@ -45,6 +45,7 @@ publishing {
                 usage('java-runtime') {
                     fromResolutionResult()
                 }
+	    }
             from(components.java)
         }
     }
