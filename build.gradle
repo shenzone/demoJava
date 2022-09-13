@@ -36,5 +36,10 @@ publishing {
       }
     }
   }
+      publications {
+        github(MavenPublication) {
+            from(components.java)
+        }
+    }
 }
 
