@@ -38,6 +38,9 @@ publishing {
   }
       publications {
         github(MavenPublication) {
+	    groupId = 'com.shenzone'
+            artifactId = 'demo'
+            version = '0.1
             from(components.java)
         }
     }
