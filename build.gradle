@@ -46,6 +46,10 @@ publishing {
                     fromResolutionResult()
                 }
 	    }
+	    credentials {
+		username = project.findProperty("github.username") ?: System.getenv("USERNAME")
+		password = project.findProperty("github.token") ?: System.getenv("TOKEN")
+	    }    
             from(components.java)
         }
     }
