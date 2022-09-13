@@ -24,14 +24,7 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-github {
-    slug
-    username = "shenzone"
-    actor = "shenzone"
-    token = "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"
-    tag = "HEAD"
-    travis = true
-}
+
 publishing {
   repositories {
     maven {
