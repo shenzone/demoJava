@@ -38,9 +38,13 @@ publishing {
   }
       publications {
         github(MavenPublication) {
-	    groupId = 'com.shenzone'
-            artifactId = 'demo'
-            version = '0.1'
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
             from(components.java)
         }
     }
