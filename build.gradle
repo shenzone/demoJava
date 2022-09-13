@@ -31,27 +31,10 @@ publishing {
       name = "GitHubPackages"
       url = "https://maven.pkg.github.com/shenzone/demoJava"
       credentials {
-                username = project.findProperty("github.username") ?: System.getenv("USERNAME")
-                password = project.findProperty("github.token") ?: System.getenv("TOKEN")
+                username = project.findProperty("github.username") ?: System.getenv("github.actor")
+                password = project.findProperty("github.token") ?: System.getenv("github.token")
       }
     }
   }
-  publications {
-	github(MavenPublication) {
-            versionMapping {
-                usage('java-api') {
-                    fromResolutionOf('runtimeClasspath')
-                }
-                usage('java-runtime') {
-                    fromResolutionResult()
-                }
-	    }
-	    credentials {
-		username = project.findProperty("github.username") ?: System.getenv("USERNAME")
-		password = project.findProperty("github.token") ?: System.getenv("TOKEN")
-	    }    
-            from(components.java)
-        }
-    }
 }
 
