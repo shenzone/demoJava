@@ -8,6 +8,8 @@ plugins {
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+github.actor='shenzone'
+secrets.GITHUB_TOKEN='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'
 
 repositories {
 	mavenCentral()
